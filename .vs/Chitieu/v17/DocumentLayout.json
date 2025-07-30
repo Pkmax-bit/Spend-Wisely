@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\views\\account\\activate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:views\\account\\activate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\viewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:viewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|c:\\users\\adminstrator\\desktop\\hki 2 n\u0103m 3\\chitieu\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4A4EFB-BE7B-4CFC-B555-664A8ED58107}|Chitieu.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,31 +81,161 @@
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA8wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T04:00:18.066Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Activate.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Account\\Activate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Activate.cshtml",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Account\\Activate.cshtml",
+              "RelativeToolTip": "Views\\Account\\Activate.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T06:45:20.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAuwC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:36:03.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T06:29:42.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T06:24:00.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T06:23:34.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAWwGMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:22:07.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModel\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:21:48.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\ViewModel\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\ViewModel\\RegisterViewModel.cs",
+              "RelativeToolTip": "ViewModel\\RegisterViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:21:31.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T06:19:35.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAwwBEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T04:05:37.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T04:00:18.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\ADMINSTRATOR\\Desktop\\HKI 2 N\u0102M 3\\Chitieu\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-30T03:54:34.22Z",
               "EditorCaption": ""

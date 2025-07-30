@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Kích hoạt tài khoản";
+}
+
+<div class="text-center mt-5">
+    @if (ViewBag.Success == true)
+    {
+            <h2 class="text-success">✅ Tài khoản đã được kích hoạt thành công!</h2>
+            <a href="@Url.Action("Login", "Account")" class="btn btn-primary mt-3">Đăng nhập</a>
+    }
+    else if (ViewBag.AlreadyActivated == true)
+    {
+            <h2 class="text-warning">⚠️ Tài khoản đã được kích hoạt trước đó.</h2>
+            <a href="@Url.Action("Login", "Account")" class="btn btn-primary mt-3">Đăng nhập</a>
+    }
+    else
+    {
+            <h2 class="text-danger">❌ Kích hoạt thất bại. Liên kết không hợp lệ hoặc đã hết hạn.</h2>
+            <a href="@Url.Action("Register", "Account")" class="btn btn-secondary mt-3">Đăng ký lại</a>
+    }
+</div>

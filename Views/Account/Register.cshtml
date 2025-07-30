@@ -1,0 +1,9 @@
+﻿@model Chitieu.ViewModel.RegisterViewModel
+
+
+<form asp-action="Register" method="post">
+    <input asp-for="Email" placeholder="Email" required />
+    <input asp-for="Password" type="password" placeholder="Mật khẩu" required />
+    <input asp-for="ConfirmPassword" type="password" placeholder="Xác nhận mật khẩu" required />
+    <button type="submit">Đăng ký</button>
+</form>
