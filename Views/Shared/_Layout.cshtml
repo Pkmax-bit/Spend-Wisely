@@ -9,31 +9,118 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Chitieu.styles.css" asp-append-version="true" />
     @RenderSection("Styles", required: false)
+    <style>
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white !important;
+            transition: opacity 0.2s;
+        }
+        .navbar-nav .nav-link:hover {
+            opacity: 0.8;
+        }
+        .sidebar {
+            min-height: calc(100vh - 70px);
+            background: linear-gradient(180deg, #ffffff, #f8f9fa);
+            padding: 20px 15px;
+            width: 200px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .sidebar.collapsed {
+            transform: translateX(-200px);
+        }
+        .main-content {
+            margin-left: 200px;
+            padding: 20px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .main-content.collapsed {
+            margin-left: 0;
+        }
+        .sidebar-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1100;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .sidebar-toggle:hover {
+            background: linear-gradient(45deg, #0056b3, #003d80);
+        }
+        .sidebar-toggle.collapsed::after {
+            content: "\f0c9"; /* Font Awesome bars */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+        .sidebar-toggle:not(.collapsed)::after {
+            content: "\f00d"; /* Font Awesome close */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+        .sidebar .nav-link {
+            color: #333;
+            padding: 8px 15px;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .sidebar .nav-link:hover {
+            background: #007bff;
+            color: white;
+        }
+        .sidebar .nav-link i {
+            margin-right: 8px;
+        }
+        .sidebar h4 {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+        .footer {
+            background: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+        }
+       
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Chitieu</a>
+                
+                <a class="navbar-brand ms-2" asp-area="" asp-controller="Home" asp-action="Index">Quản Lý Chi Tiêu</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1 d-none">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-user me-1"></i> @Context.Session.GetString("Email")
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-user me-1"></i> @(User.Identity.Name ?? "Người dùng")
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                         <li><a class="dropdown-item" asp-controller="Profile" asp-action="Index">Cập nhật thông tin</a></li>
@@ -44,10 +131,10 @@
                         else
                         {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+                                    <a class="nav-link" asp-controller="Account" asp-action="Login">Đăng nhập</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Đăng ký</a>
+                                    <a class="nav-link" asp-controller="Account" asp-action="Register">Đăng ký</a>
                                 </li>
                         }
                     </ul>
@@ -55,10 +142,34 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="container-fluid">
+        <div class="row">
+            @if (User.Identity.IsAuthenticated)
+            {
+                    <nav class="col-md-3 col-lg-2 sidebar" id="sidebar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Expense" asp-action="AddTransaction"><i class="fa fa-plus-circle"></i> Thêm Giao Dịch</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Expense" asp-action="Index"><i class="fa fa-list-alt"></i> Danh Sách Giao Dịch</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Expense" asp-action="Reports"><i class="fa fa-chart-pie"></i> Báo Cáo Chi Tiêu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Profile" asp-action="AddNguoiChiTieu"><i class="fa fa-users"></i> Quản Lý Gia Đình</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Profile" asp-action="Index"><i class="fa fa-user"></i> Thông Tin Cá Nhân</a>
+                            </li>
+                        </ul>
+                    </nav>
+            }
+            <main class="col-md-9 ms-sm-auto col-lg-10 main-content">
+                @RenderBody()
+            </main>
+        </div>
     </div>
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -68,6 +179,32 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            let isSidebarCollapsed = false;
+        @if (!User.Identity.IsAuthenticated)
+        {
+            @:isSidebarCollapsed = true;
+            @:$('.sidebar').addClass('collapsed');
+            @:$('.main-content').addClass('collapsed');
+            @:$('.sidebar-toggle').addClass('collapsed');
+        }
+        @if (Context.Request.Cookies["SidebarCollapsed"] == "true")
+        {
+            @:isSidebarCollapsed = true;
+            @:$('.sidebar').addClass('collapsed');
+            @:$('.main-content').addClass('collapsed');
+            @:$('.sidebar-toggle').addClass('collapsed');
+        }
+            $('#sidebarToggle').click(function () {
+                isSidebarCollapsed = !isSidebarCollapsed;
+                $('.sidebar').toggleClass('collapsed active');
+                $('.main-content').toggleClass('collapsed');
+                $('.sidebar-toggle').toggleClass('collapsed');
+                document.cookie = "SidebarCollapsed=" + isSidebarCollapsed + ";path=/;max-age=86400";
+            });
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

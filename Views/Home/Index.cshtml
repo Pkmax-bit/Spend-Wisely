@@ -8,67 +8,67 @@
     {
             <div class="row mb-4">
                 <div class="col-12 text-center">
-                    <h1 class="display-4 text-primary mb-3">Quản Lý Chi Tiêu</h1>
-                    <p class="lead">Theo dõi và quản lý chi tiêu cá nhân hoặc gia đình một cách dễ dàng và hiệu quả.</p>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <i class="fa fa-check-circle me-2"></i>Chào mừng bạn trở lại, @(Context.Session.GetString("Email") ?? "Người dùng")!
+                    <h1 class="display-5 text-primary mb-3">Quản Lý Chi Tiêu</h1>
+                    <p class="lead text-muted">Theo dõi và quản lý chi tiêu cá nhân hoặc gia đình một cách dễ dàng và hiệu quả.</p>
+                    <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                        <i class="fa fa-check-circle me-2"></i>Chào mừng bạn trở lại, @(User.Identity.Name ?? "Người dùng")!
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <!-- Dashboard Card: Add Transaction -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-plus-circle fa-3x text-primary mb-3"></i>
                             <h5 class="card-title">Thêm Giao Dịch</h5>
-                            <p class="card-text">Ghi lại các khoản chi tiêu hoặc thu nhập mới.</p>
-                            <a asp-controller="Expense" asp-action="AddTransaction" class="btn btn-primary">Thêm giao dịch</a>
+                            <p class="card-text text-muted">Ghi lại các khoản chi tiêu hoặc thu nhập mới.</p>
+                            <a asp-controller="Expense" asp-action="AddTransaction" class="btn btn-primary btn-sm">Thêm giao dịch</a>
                         </div>
                     </div>
                 </div>
                 <!-- Dashboard Card: View Transactions -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-list-alt fa-3x text-success mb-3"></i>
                             <h5 class="card-title">Danh Sách Giao Dịch</h5>
-                            <p class="card-text">Xem lịch sử các giao dịch chi tiêu và thu nhập.</p>
-                            <a asp-controller="Expense" asp-action="Index" class="btn btn-success">Xem giao dịch</a>
+                            <p class="card-text text-muted">Xem lịch sử các giao dịch chi tiêu và thu nhập.</p>
+                            <a asp-controller="Expense" asp-action="Index" class="btn btn-success btn-sm">Xem giao dịch</a>
                         </div>
                     </div>
                 </div>
                 <!-- Dashboard Card: Expense Reports -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-chart-pie fa-3x text-info mb-3"></i>
                             <h5 class="card-title">Báo Cáo Chi Tiêu</h5>
-                            <p class="card-text">Phân tích chi tiêu của bạn qua các báo cáo chi tiết.</p>
-                            <a asp-controller="Expense" asp-action="Reports" class="btn btn-info">Xem báo cáo</a>
+                            <p class="card-text text-muted">Phân tích chi tiêu của bạn qua các báo cáo chi tiết.</p>
+                            <a asp-controller="Expense" asp-action="Reports" class="btn btn-info btn-sm">Xem báo cáo</a>
                         </div>
                     </div>
                 </div>
                 <!-- Dashboard Card: Family Members -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-users fa-3x text-warning mb-3"></i>
                             <h5 class="card-title">Quản Lý Gia Đình</h5>
-                            <p class="card-text">Thêm hoặc quản lý thông tin người thân trong gia đình.</p>
-                            <a asp-controller="Profile" asp-action="AddNguoiChiTieu" class="btn btn-warning">Thêm người trong gia đình</a>
+                            <p class="card-text text-muted">Thêm hoặc quản lý thông tin người thân trong gia đình.</p>
+                            <a asp-controller="Profile" asp-action="AddNguoiChiTieu" class="btn btn-warning btn-sm">Thêm người trong gia đình</a>
                         </div>
                     </div>
                 </div>
                 <!-- Dashboard Card: Profile -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fa fa-user fa-3x text-secondary mb-3"></i>
                             <h5 class="card-title">Thông Tin Cá Nhân</h5>
-                            <p class="card-text">Cập nhật thông tin cá nhân của bạn.</p>
-                            <a asp-controller="Profile" asp-action="Index" class="btn btn-secondary">Cập nhật thông tin</a>
+                            <p class="card-text text-muted">Cập nhật thông tin cá nhân của bạn.</p>
+                            <a asp-controller="Profile" asp-action="Index" class="btn btn-secondary btn-sm">Cập nhật thông tin</a>
                         </div>
                     </div>
                 </div>
@@ -77,19 +77,16 @@
     else
     {
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h1 class="display-4 text-primary mb-3">Chào Mừng Đến Với Quản Lý Chi Tiêu</h1>
-                    <p class="lead">Đăng nhập hoặc đăng ký để bắt đầu quản lý chi tiêu cá nhân hoặc gia đình của bạn.</p>
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <div class="col-12 col-md-8 text-center">
+                    <h1 class="display-5 text-primary mb-3">Chào Mừng Đến Với Quản Lý Chi Tiêu</h1>
+                    <p class="lead text-muted">Đăng nhập hoặc đăng ký để bắt đầu quản lý chi tiêu cá nhân hoặc gia đình của bạn.</p>
+                    <div class="alert alert-info alert-dismissible fade show shadow-sm" role="alert">
                         <i class="fa fa-info-circle me-2"></i>Vui lòng đăng nhập để truy cập các chức năng quản lý chi tiêu.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <div class="mt-4">
-                        <a asp-controller="Account" asp-action="Login" class="btn btn-primary me-2">Đăng nhập</a>
-                        <a asp-controller="Account" asp-action="Register" class="btn btn-success me-2">Đăng ký</a>
-                    </div>
-                    <div class="mt-4">
-                        <p>Khám phá thêm về <a href="https://learn.microsoft.com/aspnet/core">xây dựng ứng dụng web với ASP.NET Core</a>.</p>
+                    <div class="mt-4 d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-md">Đăng nhập</a>
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-success btn-md">Đăng ký</a>
                     </div>
                 </div>
             </div>
@@ -99,22 +96,46 @@
 @section Styles {
         <style>
             .card {
-                transition: transform 0.3s;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background: linear-gradient(180deg, #ffffff, #f8f9fa);
+                border-radius: 8px;
             }
             .card:hover {
                 transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             }
             .lead {
-                font-size: 1.25rem;
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
                 color: #555;
             }
             .btn {
-                min-width: 150px;
+                min-width: clamp(120px, 30vw, 140px);
+                border-radius: 4px;
+                transition: background 0.2s;
+                font-size: clamp(0.85rem, 2vw, 0.95rem);
             }
             .alert {
-                max-width: 600px;
+                max-width: clamp(300px, 80vw, 600px);
                 margin: 0 auto;
+                border-radius: 8px;
             }
+            .display-5 {
+                font-size: clamp(1.8rem, 4vw, 2.5rem);
+                font-weight: 500;
+            }
+            .card-body {
+                padding: clamp(1rem, 2vw, 1.25rem);
+            }
+            .card-title {
+                font-size: clamp(1rem, 2.5vw, 1.1rem);
+            }
+            .card-text {
+                font-size: clamp(0.85rem, 2vw, 0.95rem);
+            }
+            .fa-3x {
+                font-size: clamp(2rem, 5vw, 2.5rem);
+            }
+       
         </style>
 }
 
@@ -122,8 +143,8 @@
         <script>
             $(document).ready(function () {
                 $('.card').hover(
-                    function () { $(this).addClass('box-shadow'); },
-                    function () { $(this).removeClass('box-shadow'); }
+                    function () { $(this).addClass('shadow'); },
+                    function () { $(this).removeClass('shadow'); }
                 );
             });
         </script>
