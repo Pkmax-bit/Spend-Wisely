@@ -2,11 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
 using System.Net;
-using Chitieu.ViewModel; // đúng namespace ViewModel
+using Chitieu.ViewModel;
 using Chitieu.Data;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
-using Chitieu.ViewModel;
+using System.Security.Cryptography;
+using System.Text;
 
 public class AccountController : Controller
 {
@@ -31,12 +32,15 @@ public class AccountController : Controller
                 return View(model);
             }
 
+            var randomCode = Guid.NewGuid().ToString();
+            string hashedPassword = HashPassword(model.Password, randomCode);
+
             var user = new User
             {
                 Email = model.Email,
-                Password = model.Password, // Khuyến nghị: nên hash
+                Password = hashedPassword,
                 Kichhoat = false,
-                Random = Guid.NewGuid().ToString()
+                Random = randomCode
             };
 
             _context.Users.Add(user);
@@ -92,7 +96,7 @@ public class AccountController : Controller
             ViewBag.Success = true;
         }
 
-        return View(); // => Views/Account/Activate.cshtml
+        return View(); // Views/Account/Activate.cshtml
     }
 
     [HttpGet]
@@ -101,8 +105,16 @@ public class AccountController : Controller
     [HttpPost]
     public IActionResult Login(LoginViewModel model)
     {
-        var user = _context.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
+        var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
         if (user == null)
+        {
+            ModelState.AddModelError("", "Sai thông tin đăng nhập.");
+            return View(model);
+        }
+
+        string hashedInput = HashPassword(model.Password, user.Random ?? "");
+
+        if (user.Password != hashedInput)
         {
             ModelState.AddModelError("", "Sai thông tin đăng nhập.");
             return View(model);
@@ -113,8 +125,21 @@ public class AccountController : Controller
             ModelState.AddModelError("", "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email.");
             return View(model);
         }
+        user.Lastlogin = DateTime.Now;
+        _context.SaveChanges();
 
         HttpContext.Session.SetString("Email", user.Email);
         return RedirectToAction("Index", "Home");
+    }
+
+    private string HashPassword(string password, string random)
+    {
+        using (var sha256 = SHA256.Create())
+        {
+            var combined = password + random;
+            var bytes = Encoding.UTF8.GetBytes(combined);
+            var hash = sha256.ComputeHash(bytes);
+            return Convert.ToBase64String(hash);
+        }
     }
 }

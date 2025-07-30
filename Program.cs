@@ -1,27 +1,25 @@
-using Chitieu.Data;
+﻿using Chitieu.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// C?u h�nh DbContext
+// Cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
-// ?? C?u h�nh Session
-builder.Services.AddDistributedMemoryCache(); // L?u session trong RAM
+// ✅ Cấu hình Session
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Th?i gian s?ng c?a session
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian session tồn tại
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
 
+builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -33,10 +31,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
-
-// ?? ??ng k� middleware Session
+// ✅ Kích hoạt Session
 app.UseSession();
+
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",

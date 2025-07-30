@@ -1,0 +1,26 @@
+﻿@model Chitieu.Models.NguoiChiTieu
+@{
+    ViewData["Title"] = "Thêm người trong gia đình";
+}
+
+<h2>Thêm người trong gia đình</h2>
+
+<form asp-action="AddNguoiChiTieu" asp-controller="Profile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Họ tên</label>
+        <input asp-for="Tennguoichitieu" class="form-control" />
+        <span asp-validation-for="Tennguoichitieu" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Ảnh đại diện</label>
+        <input type="file" name="uploadImage" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Thêm</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Quay lại</a>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

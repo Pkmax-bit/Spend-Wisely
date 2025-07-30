@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chitieu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d7ad855f7ed8ad1683d0a577d0eb0c16eaf50de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27bc83cb074e011cc7bd2f978a0b738d7285a7ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chitieu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chitieu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
