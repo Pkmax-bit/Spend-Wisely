@@ -1,13 +1,17 @@
-﻿using Chitieu.Models;
+﻿using Chitieu.Data;
+using Chitieu.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
 using System.Net;
 using Chitieu.ViewModel;
-using Chitieu.Data;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 public class AccountController : Controller
 {
@@ -96,14 +100,14 @@ public class AccountController : Controller
             ViewBag.Success = true;
         }
 
-        return View(); // Views/Account/Activate.cshtml
+        return View();
     }
 
     [HttpGet]
     public IActionResult Login() => View();
 
     [HttpPost]
-    public IActionResult Login(LoginViewModel model)
+    public async Task<IActionResult> Login(LoginViewModel model)
     {
         var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
         if (user == null)
@@ -125,10 +129,40 @@ public class AccountController : Controller
             ModelState.AddModelError("", "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email.");
             return View(model);
         }
+
+        // Set session
+        HttpContext.Session.SetString("Email", user.Email);
+
+        // Create claims for authentication
+        var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, user.Email),
+        new Claim(ClaimTypes.NameIdentifier, user.Email)
+    };
+
+        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var authProperties = new AuthenticationProperties
+        {
+            IsPersistent = true,
+            ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30)
+        };
+
+        // Sign in the user
+        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+            new ClaimsPrincipal(claimsIdentity),
+            authProperties);
+
         user.Lastlogin = DateTime.Now;
         _context.SaveChanges();
 
-        HttpContext.Session.SetString("Email", user.Email);
+        return RedirectToAction("Index", "Home");
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        HttpContext.Session.Clear();
         return RedirectToAction("Index", "Home");
     }
 

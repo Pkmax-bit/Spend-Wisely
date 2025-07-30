@@ -1,15 +1,130 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Quản Lý Chi Tiêu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>
-        Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
-    </p>
-
-    <div class="mt-4">
-        <a href="@Url.Action("Login", "Account")" class="btn btn-primary me-2">Đăng nhập</a>
-        <a href="@Url.Action("Register", "Account")" class="btn btn-success">Đăng ký</a>
-    </div>
+<div class="container-fluid">
+    @if (User.Identity.IsAuthenticated)
+    {
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 text-primary mb-3">Quản Lý Chi Tiêu</h1>
+                    <p class="lead">Theo dõi và quản lý chi tiêu cá nhân hoặc gia đình một cách dễ dàng và hiệu quả.</p>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fa fa-check-circle me-2"></i>Chào mừng bạn trở lại, @(Context.Session.GetString("Email") ?? "Người dùng")!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Dashboard Card: Add Transaction -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-plus-circle fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Thêm Giao Dịch</h5>
+                            <p class="card-text">Ghi lại các khoản chi tiêu hoặc thu nhập mới.</p>
+                            <a asp-controller="Expense" asp-action="AddTransaction" class="btn btn-primary">Thêm giao dịch</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dashboard Card: View Transactions -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-list-alt fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Danh Sách Giao Dịch</h5>
+                            <p class="card-text">Xem lịch sử các giao dịch chi tiêu và thu nhập.</p>
+                            <a asp-controller="Expense" asp-action="Index" class="btn btn-success">Xem giao dịch</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dashboard Card: Expense Reports -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-chart-pie fa-3x text-info mb-3"></i>
+                            <h5 class="card-title">Báo Cáo Chi Tiêu</h5>
+                            <p class="card-text">Phân tích chi tiêu của bạn qua các báo cáo chi tiết.</p>
+                            <a asp-controller="Expense" asp-action="Reports" class="btn btn-info">Xem báo cáo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dashboard Card: Family Members -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-users fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">Quản Lý Gia Đình</h5>
+                            <p class="card-text">Thêm hoặc quản lý thông tin người thân trong gia đình.</p>
+                            <a asp-controller="Profile" asp-action="AddNguoiChiTieu" class="btn btn-warning">Thêm người trong gia đình</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dashboard Card: Profile -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa fa-user fa-3x text-secondary mb-3"></i>
+                            <h5 class="card-title">Thông Tin Cá Nhân</h5>
+                            <p class="card-text">Cập nhật thông tin cá nhân của bạn.</p>
+                            <a asp-controller="Profile" asp-action="Index" class="btn btn-secondary">Cập nhật thông tin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    }
+    else
+    {
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h1 class="display-4 text-primary mb-3">Chào Mừng Đến Với Quản Lý Chi Tiêu</h1>
+                    <p class="lead">Đăng nhập hoặc đăng ký để bắt đầu quản lý chi tiêu cá nhân hoặc gia đình của bạn.</p>
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <i class="fa fa-info-circle me-2"></i>Vui lòng đăng nhập để truy cập các chức năng quản lý chi tiêu.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="mt-4">
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-primary me-2">Đăng nhập</a>
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-success me-2">Đăng ký</a>
+                    </div>
+                    <div class="mt-4">
+                        <p>Khám phá thêm về <a href="https://learn.microsoft.com/aspnet/core">xây dựng ứng dụng web với ASP.NET Core</a>.</p>
+                    </div>
+                </div>
+            </div>
+    }
 </div>
+
+@section Styles {
+        <style>
+            .card {
+                transition: transform 0.3s;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+            }
+            .lead {
+                font-size: 1.25rem;
+                color: #555;
+            }
+            .btn {
+                min-width: 150px;
+            }
+            .alert {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        </style>
+}
+
+@section Scripts {
+        <script>
+            $(document).ready(function () {
+                $('.card').hover(
+                    function () { $(this).addClass('box-shadow'); },
+                    function () { $(this).removeClass('box-shadow'); }
+                );
+            });
+        </script>
+}
